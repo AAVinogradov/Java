@@ -13,48 +13,48 @@ public class Main {
         boolean coffeeIsEnough = coffeeAmount >= cappuchinoCoffeeRequired;
 
         if(!isBlocked) {
-            System.out.println("Р“РѕС‚РѕРІРёРј РєРѕС„Рµ");
+            System.out.println("Готовим кофе");
         } else {
-            System.out.println("РљРѕС„РµРјР°С€РёРЅР° Р·Р°Р±Р»РѕРєРёСЂРѕРІР°РЅР°");
+            System.out.println("Кофемашина заблокирована");
         }
 
         if(coffeeAmount >= cappuchinoCoffeeRequired &&
             milkAmount >= cappuchinoCoffeeRequired) {
-            System.out.println("Р“РѕС‚РѕРІРёРј РєР°РїСѓС‡РёРЅРѕ");
+            System.out.println("Готовим капучино");
         } else {
-            System.out.println("РРЅРіСЂРµРґРёРµРЅС‚РѕРІ РЅРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ");
+            System.out.println("Ингредиентов недостаточно");
         }
 
         if(milkAmount >= cappuchinoCoffeeRequired ||
             skimdMilkAmound >= cappuchinoMilkRequired) {
-            System.out.println("РњРѕР»РѕРєР° РґРѕСЃС‚Р°С‚РѕС‡РЅРѕ");
+            System.out.println("Молока достаточно");
         } else {
-            System.out.println("РњРѕР»РѕРєР° РЅРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ");
+            System.out.println("Молока недостаточно");
         }
 
 //        if(!isBlocked && milkAmount >= cappuchinoCoffeeRequired && coffeeAmount >= cappuchinoCoffeeRequired) {
-//            System.out.println("Р“РѕС‚РѕРІРёРј РєРѕС„Рµ");
+//            System.out.println("Готовим кофе");
 //        } else {
-//            System.out.println("Р§С‚Рѕ-С‚Рѕ РїРѕС€Р»Рѕ РЅРµ С‚Р°Рє :(");
+//            System.out.println("Что-то пошло не так :(");
 //        }
 
 //        if(skimdMilkAmound >= cappuchinoMilkRequired || milkAmount >= cappuchinoMilkRequired || lowLactoseMilkAmount >= cappuchinoMilkRequired) {
-//            System.out.println("РњРѕР»РѕРєР° РґРѕСЃС‚Р°С‚РѕС‡РЅРѕ");
+//            System.out.println("Молока достаточно");
 //        } else {
-//            System.out.println("РњРѕР»РѕРєР° РЅРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ");
+//            System.out.println("Молока недостаточно");
 //        }
 
         if(!isBlocked && coffeeAmount >= cappuchinoCoffeeRequired && (skimdMilkAmound >= cappuchinoMilkRequired ||  milkAmount >= cappuchinoMilkRequired)) {
-            System.out.println("Р“РѕС‚РѕРІРёРј РєРѕС„Рµ");
+            System.out.println("Готовим кофе");
         } else {
-            System.out.println("Р§С‚Рѕ-С‚Рѕ РїРѕС€Р»Рѕ РЅРµ С‚Р°Рє");
+            System.out.println("Что-то пошло не так");
         }
 
 
         if(!isBlocked && coffeeIsEnough && milkIsEnough) {
-            System.out.println("Р“РѕС‚РѕРІРёРј РєРѕС„Рµ");
+            System.out.println("Готовим кофе");
         } else {
-            System.out.println("Р§С‚Рѕ-С‚Рѕ РїРѕС€Р»Рѕ РЅРµ С‚Р°Рє");
+            System.out.println("Что-то пошло не так");
         }
 
 
