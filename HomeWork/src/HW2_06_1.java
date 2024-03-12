@@ -6,10 +6,10 @@ public class HW2_06_1 {
         double printRollerMinTemp = 80.5;
         double printRollerMaxTemp = 120.75;
 
-        int pagesInBook = 530;
-        int booksCount = 2000;
+        int pagesInBook = 730;
+        int booksCount = 2001;
         boolean coldPrintingMode = false;
-        double printRollerTemp = 50;
+        double printRollerTemp = 90;
 
         int papersCount = booksCount * pagesInBook / 2;
         int inkedPapersCount = papersCount + booksCount;
@@ -19,9 +19,13 @@ public class HW2_06_1 {
         boolean coversAreEnough = booksCount <= coverReserve;
         boolean rollerTempIsNormal = printRollerTemp >= printRollerMinTemp && printRollerTemp <= printRollerMaxTemp;
         boolean errors = false;
-        if (!paperIsEnough || !inkIsEnough) {
+        if (!paperIsEnough) {
             errors = true;
-            System.out.println("Бумаги или чернил недостаточно");
+            System.out.println("Бумаги недостаточно");
+        }
+        if (!inkIsEnough) {
+            errors = true;
+            System.out.println("Чернил недостаточно");
         }
         if (!coldPrintingMode && !rollerTempIsNormal) {
             errors = true;
