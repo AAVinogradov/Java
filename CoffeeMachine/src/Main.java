@@ -8,7 +8,7 @@ public class Main {
         int lowLactoseMilkAmount = 1000;
         int cappuchinoMilkRequired = 60;
         int cappuchinoCoffeeRequired = 15;
-        boolean isBlocked = true;
+        boolean isBlocked = false;
         boolean milkIsEnough = skimdMilkAmound >= cappuchinoMilkRequired || milkAmount >= cappuchinoMilkRequired;
         boolean coffeeIsEnough = coffeeAmount >= cappuchinoCoffeeRequired;
 
@@ -49,14 +49,33 @@ public class Main {
         } else {
             System.out.println("Что-то пошло не так");
         }
-
-
-        if(!isBlocked && coffeeIsEnough && milkIsEnough) {
+        if (isBlocked) {
+            System.out.println("Кофемашина заблокирована");
+        } else if (coffeeIsEnough && milkIsEnough) {
             System.out.println("Готовим кофе");
-        } else {
-            System.out.println("Что-то пошло не так");
+        } else if (!coffeeIsEnough) {
+            System.out.println("Кофе недостаточно");
+        } else if (!milkIsEnough) {
+            System.out.println("Молока недостаточно");
         }
 
 
+        boolean hasErrors = false;
+
+        if (isBlocked) {
+            System.out.println("Кофемашина заблокирована");
+            hasErrors = true;
+        }
+        if (!coffeeIsEnough) {
+            System.out.println("Кофе недостаточно");
+            hasErrors = true;
+        }
+        if (!milkIsEnough) {
+            System.out.println("Молока недостаточно");
+            hasErrors = true;
+        }
+        if (!hasErrors) {
+            System.out.println("Готовим кофе");
+        }
     }
 }
