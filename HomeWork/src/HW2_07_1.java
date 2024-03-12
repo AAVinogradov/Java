@@ -1,6 +1,6 @@
 public class HW2_07_1 {
     public static void main(String[] args) {
-        boolean errors = true;
+        boolean errors = false;
         String message;
         if (!errors) {
             System.out.println("Печать разрешена");
